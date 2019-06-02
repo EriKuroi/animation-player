@@ -1,0 +1,528 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+/*-----------header--------------*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 48px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24), 0px 0px 4px rgba(0, 0, 0, 0.12);
+    background: #FFFFFF;
+}
+
+.menu {
+    padding: 14px 0 22px 19px;
+}
+
+.additional_menu {
+    padding: 12px 20px 20px 0;
+}
+
+.headline {
+    flex-grow: 1;
+    padding: 8px 0 16px 35px;
+}
+
+/* Page Title */
+.headline h2 {
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    /* identical to box height */
+
+    color: rgba(0, 0, 0, 0.87);
+
+}
+
+
+/*---------------main-----------------*/
+
+main {
+    display: flex;
+    align-items: stretch;
+    height: 852px;
+}
+
+h3 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* Tools and icons */
+
+.left,
+.right,
+.frame-area {
+    margin: 29px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-grow: 1;
+}
+
+.tools-colors, .tools-shapes, .colors-chosen, .colors-pallete{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+}
+.fa {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.tools,
+.colors {
+    /* sheet bg */
+    width: 60px;
+    height: 246px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24), 0px 0px 4px rgba(0, 0, 0, 0.12);
+}
+
+
+.tools>div>div,
+.colors>div>div {
+    display: flex;
+
+}
+
+.colors-chosen {
+    height: 35%;
+}
+.colors-pallete {
+    height: 65%;
+}
+
+.icon {
+    width: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tools>div>div {
+    cursor: pointer;
+
+}
+
+.color__point {
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+.green{
+    background-color: green;
+}
+.yellow{
+    background-color: yellow;
+}
+/* Frames */
+
+.frame-area {
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.frames {
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24), 0px 0px 4px rgba(0, 0, 0, 0.12);
+}
+
+.frame {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    margin-bottom: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.active-frame {
+    border: 3px solid rgba(0, 0, 0, 0.5);
+}
+
+.frame-control {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    border: solid rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.frame-num {
+    border-width: 0 1px 1px 0;
+    font-weight: 500;
+    border-radius: 0 0 15px 0;
+}
+
+.frame-del {
+    visibility: hidden;
+    left: 119px;
+    border-width: 0 0 1px 1px;
+    border-radius: 0 0 0 15px;
+}
+
+.frame-copy {
+    visibility: hidden;
+    left: 119px;
+    top: 119px;
+    border-width: 1px 0 0 1px;
+    border-radius: 15px 0 0 0;
+}
+
+.frame-move {
+    visibility: hidden;
+    top: 120px;
+}
+
+.frame:hover .frame-control {
+    visibility: visible;
+}
+
+.frameplus {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.frameplus>h3,
+.frameplus>.fa {
+    color: white;
+}
+
+.frame__canvas {
+    width: 100%;
+    height: 100%;
+    background-color: #E5E5E5;
+}
+
+/* Drawing field */
+
+.field-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 3;
+}
+
+.field {
+    width: 725px;
+    height: 731px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-column-gap: 8.22px;
+    grid-row-gap: 8.28px;
+}
+
+.item {
+    background: #E5E5E5;
+}
+
+.item__movable {
+    cursor: grab;
+}
+
+.item__movable:active {
+    cursor: grabbing;
+}
+
+.item__round {
+    border-radius: calc(100%/2);
+}
+
+/* Animation preview */
+
+.right {
+    margin: 20px;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: white;
+
+}
+
+.animation {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24), 0px 0px 4px rgba(0, 0, 0, 0.12);
+
+}
+
+.animation-frame {
+    height: 250px;
+    width: 250px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #E5E5E5;
+}
+
+.preview-button {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    border: solid rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.animation-frame:hover>.preview-button {
+    visibility: visible;
+}
+
+.fps-section {
+    width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+}
+
+.fps {
+    height: 30px;
+    width: 60px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+}
+
+/* Popup */
+
+.popup-bacground-hover {
+    background: rgba(0, 0, 0, .4);
+    cursor: pointer;
+    display: none;
+    height: 100%;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}
+
+.popup-bacground-hover .helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.popup {
+    background-color: #E5E5E5;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    box-shadow: 10px 10px 60px #555;
+    display: inline-block;
+    width: 600px;
+    height: 600px;
+    vertical-align: middle;
+    position: relative;
+    border-radius: 8px;
+}
+
+.popup-close-button {
+    background-color: #fff;
+    border: 3px solid #999;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 20px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+.popup-close-button:hover {
+    background-color: #ccc;
+}

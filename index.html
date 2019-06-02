@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>Animation player</title>
+</head>
+
+<body>
+    <header>
+        <!--<i class="fa fa-bars" aria-hidden="true"></i> -->
+        <div class="menu">
+            <object type="image/svg+xml" data="./assets/bars.svg">
+            </object>
+        </div>
+        <div class="headline">
+            <h2>CodeJam - Animation Player</h2>
+        </div>
+        <div class="additional_menu">
+            <object type="image/svg+xml" data="./assets/dots.svg">
+                <!-- fallback image in CSS -->
+            </object>
+        </div>
+    </header>
+
+    <main>
+        <aside class="left">
+            <div class="tools">
+                <div class="tools-colors">
+                    <div class="paint_bucket">
+                        <div class="icon">
+                            <img src="./assets/paint-bucket.svg"
+                                alt="<i class='fa fa-file-image-o' aria-hidden='true'></i>">
+                        </div>
+                    </div>
+                    <div class="color_pick">
+                        <div class="icon">
+                            <img src="./assets/color-picker.svg"
+                                alt="<i class='fa fa-file-image-o' aria-hidden='true'></i>">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tools-shapes">
+                    <div class="move">
+                        <div class="icon">
+                            <img src="./assets/move.svg" alt="<i class='fa fa-file-image-o' aria-hidden='true'></i>">
+                        </div>
+
+                    </div>
+                    <div class="transform">
+                        <div class="icon">
+                            <img src="./assets/transform.svg"
+                                alt="<i class='fa fa-file-image-o' aria-hidden='true'></i>">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="colors">
+                <div class="colors-chosen">
+                    <div class="current">
+                        <div class="icon ">
+                            <div class="color__point" id="currentColor"></div>
+                        </div>
+
+                    </div>
+                    <div class="previous">
+                        <div class="icon ">
+                            <div class="color__point" id="previousColor"></div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="colors-pallete">
+                    <div class="color">
+                        <div class="icon ">
+                            <div class="color__point red"></div>
+
+                        </div>
+
+                    </div>
+                    <div class="color">
+                        <div class="icon ">
+                            <div class="color__point blue"></div>
+
+                        </div>
+
+                    </div>
+                    <div class="color">
+                        <div class="icon ">
+                            <div class="color__point green"></div>
+
+                        </div>
+                    </div>
+                    <div class="color">
+                        <div class="icon ">
+                            <div class="color__point yellow"></div>
+
+                        </div>
+                    </div>                    
+            </div>
+        </aside>
+        <aside class="frame-area">
+            <div class="frames">
+                <div class="frame active-frame">
+                    <div class="frame-control frame-num">
+                        <h3 class="num">
+                            1
+                        </h3>
+                    </div>
+                    <div class="frame-control frame-copy">
+                        <i class="fa fa-clone" aria-hidden="true"></i>
+                    </div>
+                    <canvas class="frame__canvas" id="1"></canvas>
+                </div>
+            </div>
+            <div class="frameplus">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+                <h3>
+                    Add new frame
+                </h3>
+            </div>
+        </aside>
+
+        <div class="field-area">
+            <div class="field">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+        </div>
+        <aside class="right">
+            <div class="animation">
+                <div class="animation-frame">
+                    <div class="preview-button">
+                        <i class="fa fa-desktop" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="fps-section">
+
+                    <div class="fps-display">
+                        <h3>13 FPS</h3>
+                    </div>
+
+                    <input type="range" id="fps" name="fps" min="1" max="24">
+
+
+                </div>
+            </div>
+        </aside>
+        <div class="popup-bacground-hover">
+            <span class="helper"></span>
+            <div class="popup">
+                <div class="popup-close-button">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./node_modules/html2canvas/dist/html2canvas.js"> </script>
+    <script src="./all.js"></script>
+</body>
+
+</html>
